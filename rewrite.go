@@ -39,8 +39,7 @@ func (r *Rule) Rewrite(req *http.Request) bool {
 		return false
 	}
 
-	req.URL.Path = uo.Path
-	req.URL.RawPath = uo.RawPath
+	req.URL = uo
 	return true
 }
 
